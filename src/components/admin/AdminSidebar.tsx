@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
   LayoutDashboard,
@@ -46,14 +47,15 @@ export function AdminSidebar({ role }: Props) {
   return (
     <aside className="flex h-full w-64 flex-col bg-black text-white">
       {/* Logo */}
-      <div className="flex items-center gap-3 p-6 border-b border-white/10">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand">
-          <span className="text-sm font-black text-black">PAR</span>
-        </div>
-        <div>
-          <div className="text-sm font-bold leading-tight">Admin Panel</div>
-          <div className="text-xs text-white/40">Priority Abatement</div>
-        </div>
+      <div className="flex flex-col gap-1 p-6 border-b border-white/10">
+        <Image
+          src="/brand/admin-logo.png"
+          alt="Priority Abatement & Remediation"
+          width={160}
+          height={48}
+          className="h-10 w-auto brightness-0 invert"
+        />
+        <div className="text-xs text-white/40 mt-1">Admin Panel</div>
       </div>
 
       {/* Nav */}

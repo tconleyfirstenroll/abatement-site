@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Phone, MapPin } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -56,15 +57,14 @@ export function Header() {
           <nav className="flex items-center justify-between py-3">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand">
-                  <span className="text-lg font-black text-black">PAR</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-sm font-bold leading-tight text-white">Priority Abatement</div>
-                  <div className="text-xs font-medium text-brand">& Remediation</div>
-                </div>
-              </div>
+              <Image
+                src="/brand/admin-logo.png"
+                alt="Priority Abatement & Remediation"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop nav */}

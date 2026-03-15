@@ -21,9 +21,9 @@ export default async function HomePage() {
     supabase
       .from('projects')
       .select('*')
-      .eq('show_on_home', true)
       .eq('status', 1)
       .is('deleted_at', null)
+      .order('created_at', { ascending: false })
       .limit(6),
     supabase
       .from('blogs')

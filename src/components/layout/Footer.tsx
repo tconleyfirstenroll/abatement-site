@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, MapPin, Facebook } from 'lucide-react'
 
 const quickLinks = [
@@ -16,14 +17,14 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand">
-                <span className="text-lg font-black text-black">PAR</span>
-              </div>
-              <div>
-                <div className="text-sm font-bold leading-tight text-white">Priority Abatement</div>
-                <div className="text-xs font-medium text-brand">& Remediation</div>
-              </div>
+            <div className="mb-5">
+              <Image
+                src="/brand/admin-logo.png"
+                alt="Priority Abatement & Remediation"
+                width={160}
+                height={48}
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-7 text-white/60">
               We employ and train high-quality and competent personnel who provide our clients with the highest quality services, in a reasonable amount of time and at a reasonable price.
